@@ -5,7 +5,7 @@
       @taskStateChanged="$emit('taskStateChanged', i)"
       @taskDeleted="$emit('taskDeleted', i)" :task="task"></Task>
     </template>
-    <p v-else class="no-task">Sua vida está em dia :)</p>
+    <p v-else class="no-task">Sua vida está em dia 😃</p>
   </div>
 </template>
 
