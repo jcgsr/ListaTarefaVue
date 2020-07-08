@@ -25,11 +25,11 @@
 .task {
   position: relative;
   box-sizing: border-box;
-  width: 350px;
-  height: 150px;
+  width: 20rem;
+  height: 5rem;
   padding: 10px;
   border-radius: 8px;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 300;
   cursor: pointer;
   user-select: none;
@@ -39,23 +39,23 @@
 }
 
 .pending {
-  border-left: 12px solid #b73229;
-  background-color: #f44336;
+  border-left: 12px solid #102236;
+  background-color:  #112e50;
 }
 
 .done {
   color: #ddd;
-  border-left: 12px solid #0a8f08;
-  background-color: #4caf50;
+  border-left: 12px solid rgb(5, 6, 24);
+  background-color: rgb(10, 12, 53);
   text-decoration: line-through;
 }
 
 .pending .close {
-  background-color: #b73229;
+  background-color: #102236;
 }
 
 .done .close {
-  background-color: #0a8f08;
+  background-color: rgb(5, 6, 24);
 }
 
 .close {

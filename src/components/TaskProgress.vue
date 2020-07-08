@@ -30,7 +30,7 @@ export default {
       position: absolute;
       border-radius: 8px;
       height: 100%;
-      background-color: #4caf50;
+      background-color: rgb(5, 6, 24);
       align-self: flex-start;
    }
 
