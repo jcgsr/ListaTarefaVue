@@ -4,19 +4,23 @@
     <TaskProgress :progress="progress" />
     <NewTask @taskAdded="addTask" />
     <TaskGrid :tasks="tasks" @taskDeleted="deleteTask" @taskStateChanged="toggleTaskState" />
+    <p>{{ currentDate }}</p>
+    <Footer />
   </div>
 </template>
 
 <script>
 import TaskGrid from './components/TaskGrid.vue'
+import Footer from './components/Footer.vue'
 import TaskProgress from './components/TaskProgress.vue'
 import NewTask from './components/NewTask.vue'
 
 export default {
-	components: { TaskGrid, NewTask, TaskProgress },
+	components: { TaskGrid, NewTask, TaskProgress, Footer },
 	data() {
 		return {
-			tasks: []
+			tasks: [],
+      currentDate: ''
 		}
 	},
 	computed: {
@@ -51,11 +55,20 @@ export default {
 		toggleTaskState(i) {
 			this.tasks[i].pending = !this.tasks[i].pending
 		},
+    today() {
+      let date = new Date()
+      this.currentDate = date.toLocaleDateString('pt-BR', {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric'
+      })
+    }
   },
 		mounted() {
 			const json = localStorage.getItem('tasks')
 			const array = JSON.parse(json)
 			this.tasks = Array.isArray(array) ? array : []
+      this.today()
 		}
 	}
 
