@@ -23,8 +23,8 @@ export default {
   width: 100%;
   text-align: center;
   padding: 1rem;
-  background: linear-gradient(to left, rgb(22, 34, 42), rgb(58, 96, 115));
-
+  background: rgba(24, 21, 21, 0.8);
+  color: aliceblue;
 }
 
 a:link {

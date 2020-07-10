@@ -49,7 +49,7 @@ input.form-element {
 
 button.form-element {
    border-left: none;
-   background-color: #2196f3;
+   background-color: #31363a;
    border-top-right-radius: 8px;
    border-bottom-right-radius: 8px;
 }

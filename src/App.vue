@@ -77,12 +77,12 @@ export default {
 <style>
 body {
   font-family: "Lato", sans-serif;
-  background: linear-gradient(to right, rgb(22, 34, 42), rgb(58, 96, 115));
-  color: #fff;
+  /* background: linear-gradient(to right, rgb(22, 34, 42), rgb(58, 96, 115)); */
+  background-color:rgb(80, 73, 73);
 }
 
 h1 {
-  padding: 2rem;
+  padding: 2rem;  
 }
 
 #app {
@@ -90,13 +90,18 @@ h1 {
   flex: 1;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: center;  
 }
 
 #app h1 {
   margin-bottom: 5px;
   font-weight: 300;
   font-size: 3rem;
+  font-weight: bold;
+  color: aliceblue;
+}
+
+#app p {
+	color: aliceblue;
 }
 </style>

@@ -29,7 +29,7 @@
   height: 5rem;
   padding: 10px;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 300;
   cursor: pointer;
   user-select: none;
@@ -39,23 +39,24 @@
 }
 
 .pending {
-  border-left: 12px solid #102236;
-  background-color:  #112e50;
+  border-left: 12px solid rgb(41, 41, 43);
+  background-color:   rgb(21, 21, 22);
+  color: aliceblue;
 }
 
 .done {
   color: #ddd;
-  border-left: 12px solid rgb(5, 6, 24);
-  background-color: rgb(10, 12, 53);
+  border-left: 12px solid rgb(71, 59, 59);
+  background-color: rgb(39, 34, 34);
   text-decoration: line-through;
 }
 
 .pending .close {
-  background-color: #102236;
+  background-color:rgb(41, 41, 43);
 }
 
 .done .close {
-  background-color: rgb(5, 6, 24);
+  background-color:  rgb(21, 21, 22);
 }
 
 .close {
