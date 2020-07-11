@@ -23,7 +23,7 @@ export default {
   width: 100%;
   text-align: center;
   padding: 1rem;
-  background: rgba(24, 21, 21, 0.8);
+  background: rgb(12, 1, 1);
   color: aliceblue;
 }
 

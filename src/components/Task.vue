@@ -34,6 +34,7 @@ fieldset p {
   justify-content: center; 
   align-items: center;  
   margin: auto; 
+  color: beige;
 }
 
 .task {
@@ -53,20 +54,20 @@ fieldset p {
 }
 
 .pending {
-  border-left: 12px solid rgb(41, 41, 43);
-  background-color:   rgb(21, 21, 22);
-  color: aliceblue;
+  border-left: 12px solid rgb(7, 7, 150);
+  background-color:  #0a0455;
 }
 
 .done {
   color: #ddd;
-  border-left: 12px solid rgb(71, 59, 59);
-  background-color: rgb(39, 34, 34);
+  border-left: 12px solid rgb(15, 14, 14);
+  background-color: rgb(12, 1, 1);
   text-decoration: line-through;
 }
 
 .pending .close {
-  background-color:rgb(41, 41, 43);
+  background-color: rgb(7, 7, 150);
+  color: beige;
 }
 
 .done .close {

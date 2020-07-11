@@ -35,9 +35,9 @@ export default {
 .form-element {
    outline: none;
    font-size: 2rem;
-   border: 1px solid #fff;
+   border: 1px solid #0a0455;
    padding: 5px 10px 8px;
-   color: #fff;
+   color: #0a0455;
 }
 
 input.form-element {
@@ -49,8 +49,9 @@ input.form-element {
 
 button.form-element {
    border-left: none;
-   background-color: #31363a;
+   background-color: #0a0455;
    border-top-right-radius: 8px;
    border-bottom-right-radius: 8px;
+   color: beige;
 }
 </style>

@@ -78,7 +78,7 @@ export default {
 body {
   font-family: "Lato", sans-serif;
   /* background: linear-gradient(to right, rgb(22, 34, 42), rgb(58, 96, 115)); */
-  background-color:rgb(80, 73, 73);
+  background-color: rgba(241, 241, 194, 0.705);
 }
 
 h1 {
@@ -98,10 +98,10 @@ h1 {
   font-weight: 300;
   font-size: 3rem;
   font-weight: bold;
-  color: aliceblue;
+  color:#0a0455;
 }
 
 #app p {
-	color: aliceblue;
+	color: beige;
 }
 </style>

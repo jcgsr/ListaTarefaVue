@@ -17,8 +17,8 @@ export default {
    .tasks-progress {
       position: relative;
       width: 80%;
-      border: 1px solid #fff;
-      color:#fff;
+      border: 1px solid #0a0455;
+      color:#0a0455;
       border-radius: 8px;
       margin-bottom: 15px;
       display: flex;
@@ -30,8 +30,9 @@ export default {
       position: absolute;
       border-radius: 8px;
       height: 100%;
-      background-color: rgb(53, 53, 54);
+      background-color: rgb(106, 106, 128);
       align-self: flex-start;
+      color: #0a0455;
    }
 
    .progress-value {
