@@ -27,6 +27,10 @@ export default {
   flex-wrap: wrap;
 }
 
+p {
+  color:  #0a0455;
+}
+
 .task-grid .task {
   margin: 10px;
 }

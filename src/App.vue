@@ -101,7 +101,7 @@ h1 {
   color:#0a0455;
 }
 
-#app p {
-	color: beige;
+p {
+	color: #0a0455;
 }
 </style>
