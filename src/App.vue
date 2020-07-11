@@ -102,6 +102,6 @@ h1 {
 }
 
 p {
-	color: #0a0455;
+	color: rgb(12, 1, 1);
 }
 </style>
