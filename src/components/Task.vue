@@ -1,8 +1,8 @@
 <template>
-  <div @click="$emit('taskStateChanged', task)" class="task" :class="stateClass">
+  <fieldset @click="$emit('taskStateChanged', task)" class="task" :class="stateClass">
     <span @click.stop="$emit('taskDeleted', task)" class="close">x</span>
     <p>{{ task.name }}</p>
-  </div>
+  </fieldset>
 </template>
 
 <script>
@@ -22,6 +22,20 @@
 </script>
 
 <style>
+fieldset {
+  display: flex;
+  border: none; 
+  padding: 0;
+  margin: 0;
+}
+
+fieldset p {
+  display: flex;
+  justify-content: center; 
+  align-items: center;  
+  margin: auto; 
+}
+
 .task {
   position: relative;
   box-sizing: border-box;
@@ -61,8 +75,8 @@
 
 .close {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 2px;
+  top: 2px;
   font-size: .9rem;
   font-weight: 600;
   height: 20px;
