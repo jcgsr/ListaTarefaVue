@@ -60,7 +60,7 @@ fieldset p {
 
 .done {
   color: #ddd;
-  border-left: 12px solid rgb(15, 14, 14);
+  border-left: 12px solid rgb(70, 68, 68);
   background-color: rgb(12, 1, 1);
   text-decoration: line-through;
 }
