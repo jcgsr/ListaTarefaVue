@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Lista de Tarefas Vue</h1>
+    <h1 class="animate__animated animate__bounce">Lista de Tarefas Vue</h1>
     <TaskProgress :progress="progress" />
     <NewTask @taskAdded="addTask" />
     <TaskGrid :tasks="tasks" @taskDeleted="deleteTask" @taskStateChanged="toggleTaskState" />

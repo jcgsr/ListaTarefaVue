@@ -1,39 +1,45 @@
 <template>
-  <fieldset @click="$emit('taskStateChanged', task)" class="task" :class="stateClass">
-    <span @click.stop="$emit('taskDeleted', task)" class="close">x</span>
-    <p>{{ task.name }}</p>
-  </fieldset>
+  <transition enter-active-class="animate_animated animate__zoomIn">
+    <fieldset
+      @click="$emit('taskStateChanged', task)"
+      class="task animate__animated animate__zoomIn"
+      :class="stateClass"
+    >
+      <span @click.stop="$emit('taskDeleted', task)" class="close">x</span>
+      <p>{{ task.name }}</p>
+    </fieldset>
+  </transition>
 </template>
 
 <script>
-  export default {
-    props: {
-      task: { type: Object, required: true}
-    },
-    computed: {
-      stateClass() {
-        return {
-          pending: this.task.pending,
-          done: !this.task.pending
-        }
-      }
+export default {
+  props: {
+    task: { type: Object, required: true }
+  },
+  computed: {
+    stateClass() {
+      return {
+        pending: this.task.pending,
+        done: !this.task.pending
+      };
     }
   }
+};
 </script>
 
 <style>
 fieldset {
   display: flex;
-  border: none; 
+  border: none;
   padding: 0;
   margin: 0;
 }
 
 fieldset p {
   display: flex;
-  justify-content: center; 
-  align-items: center;  
-  margin: auto; 
+  justify-content: center;
+  align-items: center;
+  margin: auto;
   color: beige;
 }
 
@@ -55,7 +61,7 @@ fieldset p {
 
 .pending {
   border-left: 12px solid rgb(7, 7, 150);
-  background-color:  #0a0455;
+  background-color: #0a0455;
 }
 
 .done {
@@ -71,14 +77,14 @@ fieldset p {
 }
 
 .done .close {
-  background-color:  rgb(59, 55, 55);
+  background-color: rgb(59, 55, 55);
 }
 
 .close {
   position: absolute;
   right: 2px;
   top: 2px;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 600;
   height: 20px;
   width: 20px;

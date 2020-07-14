@@ -1,5 +1,5 @@
 <template>
-   <div class="tasks-progress">
+   <div class="tasks-progress animate__animated animate__shakeX">
       <span class="progress-value">{{ progress }}%</span>
       <div class="progress-bar" :style="{width: progress + '%'}"></div>
    </div>
