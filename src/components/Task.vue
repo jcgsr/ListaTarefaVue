@@ -1,5 +1,6 @@
 <template>
-  <transition enter-active-class="animate_animated animate__zoomIn">
+  <transition enter-active-class="animate_animated animate__zoomIn"
+  leave-active-class="animate_animated animate__zoomOut">
     <fieldset
       @click="$emit('taskStateChanged', task)"
       class="task animate__animated animate__zoomIn"
