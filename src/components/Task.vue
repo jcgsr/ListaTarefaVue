@@ -1,97 +1,58 @@
-<template>
-  <transition enter-active-class="animate_animated animate__zoomIn"
-  leave-active-class="animate_animated animate__zoomOut"
-  move>
-    <fieldset
-      @click="$emit('taskStateChanged', task)"
-      class="task animate__animated animate__zoomIn"
-      :class="stateClass"
-    >
-      <span @click.stop="$emit('taskDeleted', task)" class="close">x</span>
-      <p>{{ task.name }}</p>
-    </fieldset>
-  </transition>
+<template id="grid">
+  <div class="task-grid">
+    <transition-group name="popup">
+      <Task
+        v-for="(task, i) in tasks"
+        :key="task.name"
+        @taskStateChanged="$emit('taskStateChanged', i)"
+        @taskDeleted="$emit('taskDeleted', i)"
+        :task="task"
+      ></Task>
+    </transition-group>
+
+    <p v-if="tasks.length < 1" class="no-task">Sua vida está em dia 😃</p>
+  </div>
 </template>
 
 <script>
+import Task from "./Task.vue";
 export default {
+  components: { Task },
   props: {
-    task: { type: Object, required: true }
-  },
-  computed: {
-    stateClass() {
-      return {
-        pending: this.task.pending,
-        done: !this.task.pending
-      };
-    }
+    tasks: { type: Array, required: true }
   }
 };
 </script>
 
 <style>
-fieldset {
-  display: flex;
-  border: none;
-  padding: 0;
-  margin: 0;
+p {
+  color: #0a0455;
 }
-
-fieldset p {
+.task-grid span {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: auto;
-  color: beige;
 }
 
-.task {
-  position: relative;
-  box-sizing: border-box;
-  width: 20rem;
-  height: 5rem;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 2rem;
-  font-weight: 300;
-  cursor: pointer;
-  user-select: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.task-grid .task {
+  margin: 10px;
 }
 
-.pending {
-  border-left: 12px solid rgb(7, 7, 150);
-  background-color: #0a0455;
+.no-task {
+  color: #aaa;
+  font-size: 1.7rem;
 }
-
-.done {
-  color: #ddd;
-  border-left: 12px solid rgb(59, 55, 55);
-  background-color: rgb(12, 1, 1);
-  text-decoration: line-through;
+.popup-move {
+  transition: all 300ms;
 }
-
-.pending .close {
-  background-color: rgb(7, 7, 150);
-  color: beige;
+.popup-enter,
+.popup-leave-to {
+  transform: scale(0);
 }
-
-.done .close {
-  background-color: rgb(59, 55, 55);
+.popup-enter-active {
+  transition: 400ms;
 }
-
-.close {
+.popup-leave-active {
+  transition: 400ms;
   position: absolute;
-  right: 2px;
-  top: 2px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  height: 20px;
-  width: 20px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
 }
 </style>
