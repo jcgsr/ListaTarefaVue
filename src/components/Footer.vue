@@ -1,7 +1,8 @@
 <template>
   <div class="footer">
     &copy;{{ footer }} <a class="btn-info" :href="link">Jovane</a>
-    {{ footer2 }} <a class="btn-info" :href="link2">Cod3r</a>
+    {{ footer2 }} <a class="btn-info" :href="link2">Cod3r</a><br>
+    Esquema de cores por minha irmã, Simone Cabral ★27.03.1973 †22.12.2020
   </div>
 </template>
 
